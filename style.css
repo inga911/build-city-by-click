@@ -1,0 +1,138 @@
+body {
+  font-family: monospace;
+}
+
+header {
+  background-color: midnightblue;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+}
+header > div {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* CLICK ZONE */
+.items-click {
+  background-color: rgb(62, 62, 110);
+  min-height: 250px;
+}
+.items-click > h1 {
+  padding: 20px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+.items-click-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.items-click-images > img {
+  width: 100px;
+  transition: all 0.2s;
+}
+.items-click-images > img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.items-click-images > img:active {
+  transform: scale(1);
+  cursor: pointer;
+}
+
+/* Shop */
+.shop {
+  padding-top: 50px;
+  text-align: center;
+  /* height: 50vh; */
+  background-color: rgb(219, 235, 230);
+}
+.shop-title {
+  background-color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.cards > .item-card {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  /* height: 300px; */
+  width: 150px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  position: relative;
+}
+.item-card > .main-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.item-card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.cards > .item-card:active {
+  transform: scale(1);
+}
+
+.card-hover > .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.bonus {
+  border-top: 1px solid black;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+.card-title {
+  font-size: 20px;
+  padding: 10px 0;
+}
+/* USER  CITY */
+.user-city {
+  background-color: rgb(211, 254, 168);
+  min-height: 20vh;
+}
+
+.disable {
+  color: grey;
+  filter: brightness(95%);
+}
+.disable:hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.card-small-img {
+  width: 20px;
+  height: 20px;
+}
+
+button {
+  background: crimson;
+  border: 0.5px solid darkred;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

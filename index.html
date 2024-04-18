@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <span id="autoLoadWood">auto</span> Wood: <span id="woodClicks">0</span>
+      </div>
+      <div>
+        <span id="autoLoadStone">auto</span> Stone:
+        <span id="stoneClicks">0</span>
+      </div>
+      <div>
+        <span id="autoLoadGold">auto</span>Gold: <span id="goldClicks">0</span>
+      </div>
+      <div>Population: <span id="population">0</span></div>
+    </header>
+
+    <div class="items-click">
+      <h1>Click to get resources</h1>
+      <div class="items-click-images">
+        <img
+          id="wood"
+          src="https://cdn.pixabay.com/photo/2023/03/12/13/59/wood-7846985_640.png"
+          alt="Wood"
+        />
+        <img
+          id="stone"
+          src="https://static.vecteezy.com/system/resources/previews/036/519/240/non_2x/ai-generated-brick-wall-clipart-design-illustration-free-png.png"
+          alt="Stone"
+        />
+        <img
+          id="gold"
+          src="https://www.mint.ca/globalassets/products/2024/l1/245027-pure-gold-coin-spirit-dragon/245027_obv-1198.png?hash=638379788070000000&quality=80"
+          alt="Gold"
+        />
+        <!-- <img
+          src="https://static.thenounproject.com/png/2367056-200.png"
+          alt="Population"
+        /> -->
+      </div>
+    </div>
+
+    <div class="shop" id="shop">
+      <div id="shopTitle" class="shop-title">Shop</div>
+      <div class="cards">
+        <div id="simpleHouse" class="item-card simple-house">
+          <div class="card-title">Simple House</div>
+          <img
+            class="main-img"
+            id="simpleHouseImg"
+            src="https://cdn-icons-png.flaticon.com/256/7015/7015757.png"
+            alt="Simple house"
+          />
+          <div class="card-hover">
+            <div class="name">
+              <img
+                class="card-small-img"
+                src="https://cdn.pixabay.com/photo/2023/03/12/13/59/wood-7846985_640.png"
+                alt="Wood"
+              />
+              x 10
+            </div>
+            <div class="name">
+              <img
+                class="card-small-img"
+                src="https://static.vecteezy.com/system/resources/previews/036/519/240/non_2x/ai-generated-brick-wall-clipart-design-illustration-free-png.png"
+                alt="Stone"
+              />
+              x 10
+            </div>
+            <div class="name">
+              <img
+                class="card-small-img"
+                src="https://www.mint.ca/globalassets/products/2024/l1/245027-pure-gold-coin-spirit-dragon/245027_obv-1198.png?hash=638379788070000000&quality=80"
+                alt="Gold"
+              />
+              x 30
+            </div>
+            <div class="name bonus">
+              Get
+              <img
+                class="card-small-img"
+                src="https://static.thenounproject.com/png/2367056-200.png"
+                alt="Population"
+              />
+              +10
+            </div>
+          </div>
+          <button>Buy</button>
+        </div>
+        <div id="biggerHouse" class="item-card bigger-house">
+          <div class="card-title">Bigger House</div>
+          <img
+            class="main-img"
+            id="biggerHouseImg"
+            src="https://png.pngtree.com/png-clipart/20230814/original/pngtree-simple-house-exterior-on-white-background-exterior-simple-eps10-vector-picture-image_10674109.png"
+            alt="Bigger House"
+          />
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://cdn.pixabay.com/photo/2023/03/12/13/59/wood-7846985_640.png"
+              alt="Wood"
+            />
+            x 30
+          </div>
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://static.vecteezy.com/system/resources/previews/036/519/240/non_2x/ai-generated-brick-wall-clipart-design-illustration-free-png.png"
+              alt="Stone"
+            />
+            x 30
+          </div>
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://www.mint.ca/globalassets/products/2024/l1/245027-pure-gold-coin-spirit-dragon/245027_obv-1198.png?hash=638379788070000000&quality=80"
+              alt="Gold"
+            />
+            x 50
+          </div>
+          <div class="name bonus">
+            Get
+            <img
+              class="card-small-img"
+              src="https://static.thenounproject.com/png/2367056-200.png"
+              alt="Population"
+            />
+            +20
+          </div>
+          <button>Buy</button>
+        </div>
+        <div id="market" class="item-card market">
+          <div class="card-title">Market</div>
+          <img
+            class="main-img"
+            id="marketImg"
+            src="https://static.vecteezy.com/system/resources/previews/015/131/811/original/flat-cartoon-style-shop-facade-front-view-modern-flat-storefront-or-supermarket-design-png.png"
+            alt="Market"
+          />
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://cdn.pixabay.com/photo/2023/03/12/13/59/wood-7846985_640.png"
+              alt="Wood"
+            />
+            x 20
+          </div>
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://static.vecteezy.com/system/resources/previews/036/519/240/non_2x/ai-generated-brick-wall-clipart-design-illustration-free-png.png"
+              alt="Stone"
+            />
+            x 100
+          </div>
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://www.mint.ca/globalassets/products/2024/l1/245027-pure-gold-coin-spirit-dragon/245027_obv-1198.png?hash=638379788070000000&quality=80"
+              alt="Gold"
+            />
+            x 200
+          </div>
+
+          <div>
+            <img
+              class="card-small-img"
+              src="https://static.thenounproject.com/png/2367056-200.png"
+              alt="Population"
+            />
+            x 100
+          </div>
+          <div class="name bonus">
+            Get
+            <img
+              class="card-small-img"
+              src="https://www.mint.ca/globalassets/products/2024/l1/245027-pure-gold-coin-spirit-dragon/245027_obv-1198.png?hash=638379788070000000&quality=80"
+              alt="Gold"
+            />
+            + 1 / second
+          </div>
+          <button>Buy</button>
+        </div>
+        <div id="stoneWall" class="item-card stone-wall">
+          <div class="card-title">Stone Wall</div>
+          <img
+            class="main-img"
+            id="stoneWallImg"
+            src="https://storage.needpix.com/rsynced_images/background-1298101_1280.png"
+            alt="Stone Wall"
+          />
+
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://cdn.pixabay.com/photo/2023/03/12/13/59/wood-7846985_640.png"
+              alt="Wood"
+            />
+            x 20
+          </div>
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://static.vecteezy.com/system/resources/previews/036/519/240/non_2x/ai-generated-brick-wall-clipart-design-illustration-free-png.png"
+              alt="Stone"
+            />
+            x 200
+          </div>
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://www.mint.ca/globalassets/products/2024/l1/245027-pure-gold-coin-spirit-dragon/245027_obv-1198.png?hash=638379788070000000&quality=80"
+              alt="Gold"
+            />
+            x 200
+          </div>
+          <div>
+            <img
+              class="card-small-img"
+              src="https://static.thenounproject.com/png/2367056-200.png"
+              alt="Population"
+            />
+            x 50
+          </div>
+          <button>Buy</button>
+        </div>
+        <div id="cityHall" class="item-card city-hall">
+          <div class="card-title">City Hall</div>
+          <img
+            class="main-img"
+            id="cityHallImg"
+            src="https://issaquahhighlands.com/wp-content/uploads/2015/03/town-hall-hi.png"
+            alt="City hall"
+          />
+
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://cdn.pixabay.com/photo/2023/03/12/13/59/wood-7846985_640.png"
+              alt="Wood"
+            />
+            x 200
+          </div>
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://static.vecteezy.com/system/resources/previews/036/519/240/non_2x/ai-generated-brick-wall-clipart-design-illustration-free-png.png"
+              alt="Stone"
+            />
+            x 200
+          </div>
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://www.mint.ca/globalassets/products/2024/l1/245027-pure-gold-coin-spirit-dragon/245027_obv-1198.png?hash=638379788070000000&quality=80"
+              alt="Gold"
+            />
+            x 500
+          </div>
+          <div>
+            <img
+              class="card-small-img"
+              src="https://static.thenounproject.com/png/2367056-200.png"
+              alt="Population"
+            />
+            x 300
+          </div>
+          <button>Buy</button>
+        </div>
+        <div id="autoWood" class="item-card auto-wood">
+          <div class="card-title">wood +1/sec</div>
+          <img
+            class="main-img"
+            src="https://cdn.pixabay.com/photo/2023/03/12/13/59/wood-7846985_640.png"
+          />
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://cdn.pixabay.com/photo/2023/03/12/13/59/wood-7846985_640.png"
+              alt="Wood"
+            />
+            x 200
+          </div>
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://static.vecteezy.com/system/resources/previews/036/519/240/non_2x/ai-generated-brick-wall-clipart-design-illustration-free-png.png"
+              alt="Stone"
+            />
+            x 50
+          </div>
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://www.mint.ca/globalassets/products/2024/l1/245027-pure-gold-coin-spirit-dragon/245027_obv-1198.png?hash=638379788070000000&quality=80"
+              alt="Gold"
+            />
+            x 1000
+          </div>
+          <div>
+            <img
+              class="card-small-img"
+              src="https://static.thenounproject.com/png/2367056-200.png"
+              alt="Population"
+            />
+            x 50
+          </div>
+          <button>Buy</button>
+        </div>
+        <div id="autoStone" class="item-card auto-stone">
+          <div class="card-title">Stone +1/sec</div>
+          <img
+            class="main-img"
+            src="https://static.vecteezy.com/system/resources/previews/036/519/240/non_2x/ai-generated-brick-wall-clipart-design-illustration-free-png.png"
+            alt="Stone"
+          />
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://cdn.pixabay.com/photo/2023/03/12/13/59/wood-7846985_640.png"
+              alt="Wood"
+            />
+            x 200
+          </div>
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://static.vecteezy.com/system/resources/previews/036/519/240/non_2x/ai-generated-brick-wall-clipart-design-illustration-free-png.png"
+              alt="Stone"
+            />
+            x 200
+          </div>
+          <div class="name">
+            <img
+              class="card-small-img"
+              src="https://www.mint.ca/globalassets/products/2024/l1/245027-pure-gold-coin-spirit-dragon/245027_obv-1198.png?hash=638379788070000000&quality=80"
+              alt="Gold"
+            />
+            x 1000
+          </div>
+          <div>
+            <img
+              class="card-small-img"
+              src="https://static.thenounproject.com/png/2367056-200.png"
+              alt="Population"
+            />
+            x 50
+          </div>
+          <button>Buy</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-city" id="userCity"></div>
+  </body>
+</html>
