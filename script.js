@@ -34,10 +34,10 @@ const autoStones = document.getElementById('autoStone')
 const userCity = document.getElementById('userCity')
 
 // Initial counts
-let countWood = 6000;
-let countStone = 6000;
-let countGold = 6000;
-let countPopulation = 6000
+let countWood = 0;
+let countStone = 0;
+let countGold = 0;
+let countPopulation = 0
 
 // Click event listeners for resources
 woodImg.onclick = () => {
